@@ -100,8 +100,11 @@
   }
   body {
     @apply text-foreground;
-    background-image: linear-gradient(to bottom right, hsl(220, 60%, 15%), hsl(270, 50%, 10%));
-    background-attachment: fixed; /* Makes the gradient fixed during scroll */
+    background-image: url('/background-bokeh.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     
     scrollbar-width: thin;
     scrollbar-color: hsl(var(--accent)) hsl(var(--background)); /* Use new accent and a dark background color */
