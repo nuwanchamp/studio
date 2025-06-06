@@ -27,9 +27,14 @@ export default function HomePage() {
           </div>
         </section>
 
-        <SectionWrapper title="Education" id="education">
-          <Education />
-        </SectionWrapper>
+        {/* Custom structure for Education to remove the outer panel */}
+        <section id="education" className="py-16 md:py-20 scroll-mt-20">
+          <div className="container mx-auto px-4 md:px-6">
+            <h2 className="font-headline text-3xl md:text-4xl font-bold mb-10 md:mb-14 text-center text-primary">Education</h2>
+            {/* Education component rendered directly without the panel div */}
+            <Education />
+          </div>
+        </section>
 
         <SectionWrapper title="Technical Skills" id="skills">
           <SkillsShowcase />
