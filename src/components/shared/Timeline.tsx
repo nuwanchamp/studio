@@ -57,9 +57,9 @@ export function Timeline({ items }: TimelineProps) {
 
       {items.map((item, index) => {
         const isLeftAligned = index % 2 === 0;
-        // Icon is 2.5rem (w-10), gap is 1rem (spacing-4). Half icon is 1.25rem (spacing-5).
-        // So, padding from center should be half icon + gap = 1.25rem + 1rem = 2.25rem (spacing-9)
-        const sidePadding = "px-[calc(theme(spacing.5)_+_theme(spacing.4))]"; // icon_radius (1.25rem) + gap (1rem)
+        // Icon is 2.5rem (w-10), gap is 1.5rem (spacing-6). Half icon is 1.25rem (spacing-5).
+        // So, padding from center should be half icon + gap = 1.25rem + 1.5rem = 2.75rem (spacing-11)
+        const sidePadding = "px-[calc(theme(spacing.5)_+_theme(spacing.6))]"; // icon_radius (1.25rem) + gap (1.5rem)
         
         return (
           <div 
