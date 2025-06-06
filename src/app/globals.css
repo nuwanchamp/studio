@@ -4,25 +4,25 @@
 
 @layer base {
   :root {
-    /* Luminous Dark Theme - Adjusted for darker text */
-    --background: 220 40% 10%;       /* Deep Indigo - For elements needing a solid bg */
-    --foreground: 210 30% 80%;       /* Darker Soft Gray */
+    /* Dark Blue Theme */
+    --background: 220 40% 10%;       /* Deep Indigo/Dark Blue */
+    --foreground: 220 60% 80%;       /* Light Blue Text */
 
     /* Card styling for glassmorphism - base color is light, opacity applied in components */
-    --card: 220 25% 90%;              /* Very Light Cool Gray (will be used with bg-card/10, etc.) */
-    --card-foreground: 210 30% 80%;   /* Darker text on cards */
+    --card: 220 25% 90%;              /* Very Light Cool Gray (base for glass) */
+    --card-foreground: 220 60% 80%;   /* Light Blue Text on cards */
 
     --popover: 220 30% 12%;           /* Darker popover bg */
-    --popover-foreground: 210 30% 80%;/* Darker text for popovers */
+    --popover-foreground: 220 60% 80%;/* Light Blue Text for popovers */
 
     --primary: 190 85% 60%;           /* Vibrant Cyan/Teal */
     --primary-foreground: 220 40% 10%;/* Dark text for primary */
 
     --secondary: 220 20% 25%;         /* Darker shade for secondary elements */
-    --secondary-foreground: 210 30% 80%;/* Darker text for secondary elements */
+    --secondary-foreground: 220 50% 70%;/* Medium Blue Text for secondary elements */
 
     --muted: 220 15% 35%;
-    --muted-foreground: 210 20% 60%;  /* Darker muted text */
+    --muted-foreground: 220 40% 60%;  /* Muted Blue Text */
 
     --accent: 280 80% 70%;            /* Luminous Magenta/Purple */
     --accent-foreground: 0 0% 100%;   /* White text for accent */
@@ -32,10 +32,10 @@
 
     /* Border for glassy cards - light, used with opacity */
     --border: 210 20% 65%;
-    --input: 220 20% 20%;             /* Input background */
+    --input: 220 20% 20%;             /* Input background (dark blue) */
     --ring: 190 85% 60%;              /* Ring color to match new primary */
 
-    /* Chart colors to complement the new theme */
+    /* Chart colors to complement the theme */
     --chart-1: 190 85% 60%; /* Primary - Vibrant Cyan/Teal */
     --chart-2: 280 80% 70%; /* Accent - Luminous Magenta/Purple */
     --chart-3: 190 75% 50%; /* Darker Cyan/Teal */
@@ -46,11 +46,11 @@
 
     /* Sidebar - keeping it relatively consistent with a dark, focused look */
     --sidebar-background: 220 30% 8%;   /* Even darker for sidebar */
-    --sidebar-foreground: 210 25% 75%;  /* Darker sidebar text */
+    --sidebar-foreground: 210 25% 75%;  /* Darker sidebar text (cool gray) */
     --sidebar-primary: 190 85% 60%;    /* Match new primary */
     --sidebar-primary-foreground: 220 40% 10%;
     --sidebar-accent: 220 20% 20%;
-    --sidebar-accent-foreground: 210 30% 80%; /* Darker sidebar accent text */
+    --sidebar-accent-foreground: 210 30% 80%; /* Darker sidebar accent text (cool gray) */
     --sidebar-border: 220 20% 25%;
     --sidebar-ring: 190 85% 60%;
   }
@@ -58,17 +58,17 @@
   .dark {
     /* Apply the same variables for .dark to ensure consistency */
     --background: 220 40% 10%;
-    --foreground: 210 30% 80%;
+    --foreground: 220 60% 80%;
     --card: 220 25% 90%;
-    --card-foreground: 210 30% 80%;
+    --card-foreground: 220 60% 80%;
     --popover: 220 30% 12%;
-    --popover-foreground: 210 30% 80%;
+    --popover-foreground: 220 60% 80%;
     --primary: 190 85% 60%;
     --primary-foreground: 220 40% 10%;
     --secondary: 220 20% 25%;
-    --secondary-foreground: 210 30% 80%;
+    --secondary-foreground: 220 50% 70%;
     --muted: 220 15% 35%;
-    --muted-foreground: 210 20% 60%;
+    --muted-foreground: 220 40% 60%;
     --accent: 280 80% 70%;
     --accent-foreground: 0 0% 100%;
     --destructive: 0 70% 55%;
@@ -99,12 +99,12 @@
     @apply border-border; /* This will use the new --border definition */
   }
   body {
-    @apply text-foreground;
-    background-image: url('/background-bokeh.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed; /* Makes the image fixed during scroll */
-    background-repeat: no-repeat;
+    @apply bg-background text-foreground; /* Apply solid background and new text color */
+    /* background-image: url('/background-bokeh.jpg'); -- Removed */
+    /* background-size: cover; -- Removed */
+    /* background-position: center; -- Removed */
+    /* background-attachment: fixed; -- Removed */
+    /* background-repeat: no-repeat; -- Removed */
 
     scrollbar-width: thin;
     scrollbar-color: hsl(var(--accent)) hsl(var(--background)); /* Use new accent and a dark background color */
