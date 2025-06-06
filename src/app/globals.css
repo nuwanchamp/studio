@@ -4,100 +4,107 @@
 
 @layer base {
   :root {
-    --background: 210 10% 15%; /* Dark Charcoal */
-    --foreground: 0 0% 98%; /* Light text for dark background */
+    /* Luminous Dark Theme */
+    --background: 220 40% 10%;       /* Deep Indigo - For elements needing a solid bg */
+    --foreground: 210 30% 95%;       /* Soft White */
 
-    --card: 210 10% 20%; /* Base for cards, slightly lighter than bg */
-    --card-foreground: 0 0% 98%;
+    /* Card styling for glassmorphism - base color is light, opacity applied in components */
+    --card: 220 25% 90%;              /* Very Light Cool Gray (will be used with bg-card/10, etc.) */
+    --card-foreground: 210 30% 95%;   /* Text on cards */
 
-    --popover: 210 10% 18%; /* Slightly darker for popovers */
-    --popover-foreground: 0 0% 98%;
+    --popover: 220 30% 12%;           /* Darker popover bg */
+    --popover-foreground: 210 30% 95%;
 
-    --primary: 211 64% 38%; /* Dark Blue */
-    --primary-foreground: 0 0% 98%;
+    --primary: 190 85% 60%;           /* Vibrant Cyan/Teal */
+    --primary-foreground: 220 40% 10%;/* Dark text for primary */
 
-    --secondary: 210 10% 25%; /* Lighter shade for secondary elements */
-    --secondary-foreground: 0 0% 98%;
+    --secondary: 220 20% 25%;         /* Darker shade for secondary elements */
+    --secondary-foreground: 210 30% 95%;
 
-    --muted: 210 10% 30%;
-    --muted-foreground: 0 0% 70%; /* Adjusted for better contrast on dark bg */
+    --muted: 220 15% 35%;
+    --muted-foreground: 210 20% 70%;
 
-    --accent: 203 66% 67%; /* Sky Blue */
-    --accent-foreground: 210 10% 10%; /* Dark text for sky blue accent */
+    --accent: 280 80% 70%;            /* Luminous Magenta/Purple */
+    --accent-foreground: 0 0% 100%;   /* White text for accent */
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 70% 55%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 210 10% 35%; /* Border color, slightly lighter for visibility */
-    --input: 210 10% 22%; /* Input background */
-    --ring: 203 66% 67%; /* Sky Blue for rings */
+    /* Border for glassy cards - light, used with opacity */
+    --border: 210 20% 65%;
+    --input: 220 20% 20%;             /* Input background */
+    --ring: 190 85% 60%;              /* Ring color to match new primary */
 
-    --chart-1: 203 66% 67%; /* Sky Blue - Accent */
-    --chart-2: 211 64% 38%; /* Dark Blue - Primary */
-    --chart-3: 203 66% 57%; /* Darker Sky Blue */
-    --chart-4: 211 64% 48%; /* Lighter Dark Blue */
-    --chart-5: 203 66% 77%; /* Lighter Sky Blue */
+    /* Chart colors to complement the new theme */
+    --chart-1: 190 85% 60%; /* Primary - Vibrant Cyan/Teal */
+    --chart-2: 280 80% 70%; /* Accent - Luminous Magenta/Purple */
+    --chart-3: 190 75% 50%; /* Darker Cyan/Teal */
+    --chart-4: 280 70% 60%; /* Darker Magenta/Purple */
+    --chart-5: 190 90% 75%; /* Lighter Cyan/Teal */
 
     --radius: 0.5rem;
 
-    --sidebar-background: 210 10% 12%;
-    --sidebar-foreground: 0 0% 95%;
-    --sidebar-primary: 203 66% 67%;
-    --sidebar-primary-foreground: 210 10% 10%;
-    --sidebar-accent: 210 10% 20%;
-    --sidebar-accent-foreground: 0 0% 98%;
-    --sidebar-border: 210 10% 25%;
-    --sidebar-ring: 203 66% 67%;
+    /* Sidebar - keeping it relatively consistent with a dark, focused look */
+    --sidebar-background: 220 30% 8%;   /* Even darker for sidebar */
+    --sidebar-foreground: 210 25% 90%;
+    --sidebar-primary: 190 85% 60%;    /* Match new primary */
+    --sidebar-primary-foreground: 220 40% 10%;
+    --sidebar-accent: 220 20% 20%;
+    --sidebar-accent-foreground: 210 30% 95%;
+    --sidebar-border: 220 20% 25%;
+    --sidebar-ring: 190 85% 60%;
   }
 
   .dark {
-    /* Ensure dark variables match the root for consistency as this is a dark-themed app */
-    --background: 210 10% 15%;
-    --foreground: 0 0% 98%;
-    --card: 210 10% 20%;
-    --card-foreground: 0 0% 98%;
-    --popover: 210 10% 18%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 211 64% 38%;
-    --primary-foreground: 0 0% 98%;
-    --secondary: 210 10% 25%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 210 10% 30%;
-    --muted-foreground: 0 0% 70%;
-    --accent: 203 66% 67%;
-    --accent-foreground: 210 10% 10%;
-    --destructive: 0 72.2% 50.6%;
+    /* Apply the same variables for .dark to ensure consistency */
+    --background: 220 40% 10%;
+    --foreground: 210 30% 95%;
+    --card: 220 25% 90%;
+    --card-foreground: 210 30% 95%;
+    --popover: 220 30% 12%;
+    --popover-foreground: 210 30% 95%;
+    --primary: 190 85% 60%;
+    --primary-foreground: 220 40% 10%;
+    --secondary: 220 20% 25%;
+    --secondary-foreground: 210 30% 95%;
+    --muted: 220 15% 35%;
+    --muted-foreground: 210 20% 70%;
+    --accent: 280 80% 70%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 70% 55%;
     --destructive-foreground: 0 0% 98%;
-    --border: 210 10% 35%;
-    --input: 210 10% 22%;
-    --ring: 203 66% 67%;
+    --border: 210 20% 65%;
+    --input: 220 20% 20%;
+    --ring: 190 85% 60%;
 
-    --chart-1: 203 66% 67%;
-    --chart-2: 211 64% 38%;
-    --chart-3: 203 66% 57%;
-    --chart-4: 211 64% 48%;
-    --chart-5: 203 66% 77%;
+    --chart-1: 190 85% 60%;
+    --chart-2: 280 80% 70%;
+    --chart-3: 190 75% 50%;
+    --chart-4: 280 70% 60%;
+    --chart-5: 190 90% 75%;
 
-    --sidebar-background: 210 10% 12%;
-    --sidebar-foreground: 0 0% 95%;
-    --sidebar-primary: 203 66% 67%;
-    --sidebar-primary-foreground: 210 10% 10%;
-    --sidebar-accent: 210 10% 20%;
-    --sidebar-accent-foreground: 0 0% 98%;
-    --sidebar-border: 210 10% 25%;
-    --sidebar-ring: 203 66% 67%;
+    --sidebar-background: 220 30% 8%;
+    --sidebar-foreground: 210 25% 90%;
+    --sidebar-primary: 190 85% 60%;
+    --sidebar-primary-foreground: 220 40% 10%;
+    --sidebar-accent: 220 20% 20%;
+    --sidebar-accent-foreground: 210 30% 95%;
+    --sidebar-border: 220 20% 25%;
+    --sidebar-ring: 190 85% 60%;
   }
 }
 
 @layer base {
   * {
-    @apply border-border;
+    @apply border-border; /* This will use the new --border definition */
   }
   body {
-    @apply bg-background text-foreground;
-    /* Add subtle scrollbar styling for a more modern look */
+    @apply text-foreground;
+    background-image: linear-gradient(to bottom right, hsl(220, 60%, 15%), hsl(270, 50%, 10%));
+    background-attachment: fixed; /* Makes the gradient fixed during scroll */
+    
     scrollbar-width: thin;
-    scrollbar-color: hsl(var(--accent)) hsl(var(--background));
+    scrollbar-color: hsl(var(--accent)) hsl(var(--background)); /* Use new accent and a dark background color */
   }
 
   /* For Webkit browsers like Chrome, Safari */
@@ -106,12 +113,12 @@
   }
 
   body::-webkit-scrollbar-track {
-    background: hsl(var(--background));
+    background: hsl(var(--background)); /* Dark track */
   }
 
   body::-webkit-scrollbar-thumb {
-    background-color: hsl(var(--accent));
+    background-color: hsl(var(--accent)); /* New accent for thumb */
     border-radius: 10px;
-    border: 2px solid hsl(var(--background));
+    border: 2px solid hsl(var(--background)); /* Dark border for thumb */
   }
 }

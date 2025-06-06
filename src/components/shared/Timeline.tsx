@@ -23,12 +23,12 @@ export function Timeline({ items }: TimelineProps) {
       {items.map((item, index) => (
         <div key={index} className="relative flex items-start mb-10 last:mb-0 transition-all duration-300 hover:opacity-100 opacity-90">
           {/* Icon and Dot */}
-          <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center mr-6 relative z-10 shadow-lg border-2 border-background">
+          <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center mr-6 relative z-10 shadow-lg border-2 border-background"> {/* Ensure icon background contrasts with new page bg */}
             <item.icon className="w-5 h-5" />
           </div>
           
           {/* Content */}
-          <div className="flex-1 bg-card/5 backdrop-blur-sm border border-border/20 p-5 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+          <div className="flex-1 bg-card/15 backdrop-blur-lg border border-border/30 p-5 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
             <p className="text-xs text-muted-foreground font-medium uppercase tracking-wider">{item.date}</p>
             <h3 className="font-headline text-xl font-semibold mt-1.5 text-accent">{item.title}</h3>
             <p className="text-md font-medium text-foreground/80 mt-0.5 mb-2">{item.subtitle}</p>
