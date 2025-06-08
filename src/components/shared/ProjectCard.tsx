@@ -16,7 +16,7 @@ interface ProjectCardProps {
 
 export function ProjectCard({ title, description, imageUrl, imageHint, tags, liveLink, repoLink }: ProjectCardProps) {
   return (
-    <div className="flex flex-col h-full bg-card/15 backdrop-blur-lg border border-border/30 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 overflow-hidden rounded-lg group">
+    <div className="flex flex-col h-full glass-card shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 rounded-lg group">
       <div className="aspect-video relative w-full overflow-hidden">
         <Image 
           src={imageUrl} 

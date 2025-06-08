@@ -1,0 +1,132 @@
+{
+  "profile": {
+    "name": "Nuwan C. Perera",
+    "title": "Senior Software Engineer",
+    "avatarUrl": "https://placehold.co/200x200.png",
+    "avatarHint": "professional portrait",
+    "bio": "Senior Software Engineer with 8+ years of experience specializing in backend systems using PHP (Symfony, Laravel), Python, and Linux scripting. Proven track record in building real-time monitoring tools, VoIP integration (CUCM via AXL/SXL), and automating subnet scanning with SNMP. Strong advocate of SOLID, TDD, DDD, and CI/CD. Adept at designing scalable microservices and infrastructure-aware applications in enterprise-grade environments.",
+    "contact": {
+      "email": "nuwanchamp02@gmail.com",
+      "phone": "+94 71 406 2980",
+      "linkedin": "https://www.linkedin.com/in/nuwan-c-perera",
+      "location": "Kadawatha, Sri Lanka "
+    }
+  },
+  "skills": [
+    { "name": "JavaScript", "category": "Frontend", "fill": "hsl(var(--chart-1))" },
+    { "name": "TypeScript", "category": "Frontend", "fill": "hsl(var(--chart-2))" },
+    { "name": "React/Next.js", "category": "Frontend", "fill": "hsl(var(--chart-1))" },
+    { "name": "Node.js", "category": "Backend", "fill": "hsl(var(--chart-2))" },
+    { "name": "Python", "category": "Backend", "fill": "hsl(var(--chart-3))" },
+    { "name": "SQL/NoSQL", "category": "Database", "fill": "hsl(var(--chart-4))" },
+    { "name": "Cloud (AWS/GCP)", "category": "DevOps", "fill": "hsl(var(--chart-5))" },
+    { "name": "Docker/K8s", "category": "DevOps", "fill": "hsl(var(--chart-3))" }
+  ],
+  "workExperience": [
+    {
+      "date": "Mar 2023 - Present",
+      "title": "Senior Software Engineer",
+      "subtitle": "Synergy Systems Pvt Ltd  ",
+      "description": [
+        "Led the design and development of a plugin framework for a  Symfony monitoring system using micro-frontend and microservice architecture, enabling extensibility of the existing system. This centralized over 10 features and improved release cycles by more than 40%.",
+        "Architected and developed a monitoring module for 5,000+ VoIP phones across multiple Cisco CUCM clusters using AXL/SXL APIs. Exposed real-time device and network status via React-based dashboards, improving monitoring system productivity by 10%.",
+        "Led and enhanced a legacy subnet scanning method in the monitoring system by developing it as an installable module, supporting multiple scanning providers such as SNMP and ESXi using an event-driven architecture with high modularity. This reduced initial setup workload by over 30% and improved client experience by more than 10%.",
+        "Engineered a custom RHEL repository for multiple binaries required by the monitoring system, significantly reducing the workload during initial setup."
+      ],
+      "tags": ["Node.js", "React", "TypeScripts", "Jotai", "Micro-Frontend", "Symfony", "REHL"]
+    },
+    {
+      "date": "Feb 2017 - Mar 2023",
+      "title": "Senior Application Developer",
+      "subtitle": "Seneview Technologies Pvt Ltd",
+      "description": [
+         "Implemented a logging subsystem and an environment-based content comparison tool within a Laravel package, enhancing debugging capabilities for QA and developers and improving productivity by 15%.",
+        "Led the design and development of a manual policy renewal subsystem for a travel insurance solution, ensuring backward compatibility, modular architecture, and adherence to SOLID principles.",
+        "Contributed to a Laravel package used as a white-label solution for travel insurance, following TDD, semantic versioning, and best practices to ensure minimal downtime and maintainability.",
+        "Engineered a custom portal for a Purchasing Order System for a supply company, significantly improving their productivity.",
+        "Led the development of an intranet application using Flutter, which contributed to a substantial revenue increase for a consulting firm.",
+        "Skilled in API development using Postman and PHP unit testing, with experience in test automation using Selenium.",
+        "Proficient in Laravel package development, WordPress plugin creation, and theme development."
+      ],
+      "tags": ["Laravel package", "Livewire", "White Label Solutions", "Design Patterns", "Micro Services", "Alpine","Tailwind", "WordPress"]
+    },
+    {
+      "date": "Jan 2016 - Feb 2017",
+      "title": "Web Developer",
+      "subtitle": "Gloria Solutions (Pvt) Ltd",
+      "description": [
+        "Developed websites using Bootstrap, PHP OOP, and the CakePHP framework, enhancing user experience and performance.",
+        "Designed and launched three informative websites using WordPress and Photoshop, significantly increasing brand visibility."
+      ],
+      "tags": ["HTML", "CSS", "JavaScript", "PHP", "WordPress", "Photoshop"]
+    }
+  ],
+  "education": [
+    {
+      "date": "2023 - 2024",
+      "title": "Bsc(Hons) Computer Science",
+      "subtitle": "Coventry University",
+      "description": "Focused on Artificial Intelligence and Machine Learning. Thesis on Natural Language Processing.",
+      "tags": ["AI", "Machine Learning", "NLP", "Thesis"]
+    },
+    {
+      "date": "2014 - 2015",
+      "title": "Diploma in Computer System Design",
+      "subtitle": "National Institute of Business Management",
+      "description": "Graduated with a 3.98 GPU.",
+      "tags": ["Software Engineering", "Data Structures", "Algorithms"]
+    }
+  ],
+  "certifications": [
+    {
+      "name": "AWS Certified Solutions Architect - Associate",
+      "organization": "Amazon Web Services",
+      "date": "Issued: March 2022"
+    },
+    {
+      "name": "Certified Kubernetes Administrator (CKA)",
+      "organization": "The Linux Foundation",
+      "date": "Issued: July 2021"
+    },
+    {
+      "name": "Professional Scrum Master I (PSM I)",
+      "organization": "Scrum.org",
+      "date": "Issued: January 2020"
+    }
+  ],
+  "projects": [
+    {
+      "title": "E-commerce Platform",
+      "description": "A full-featured e-commerce platform with product listings, shopping cart, user authentication, and payment integration.",
+      "imageUrl": "https://placehold.co/600x400.png",
+      "imageHint": "online store",
+      "tags": ["React", "Node.js", "MongoDB", "Stripe"],
+      "liveLink": "#",
+      "repoLink": "#"
+    },
+    {
+      "title": "Task Management App",
+      "description": "A collaborative task management application with boards, lists, and cards, inspired by Trello.",
+      "imageUrl": "https://placehold.co/600x400.png",
+      "imageHint": "task board",
+      "tags": ["Vue.js", "Firebase", "Realtime DB"],
+      "liveLink": "#"
+    },
+    {
+      "title": "Data Visualization Dashboard",
+      "description": "An interactive dashboard for visualizing complex datasets, built with D3.js and React.",
+      "imageUrl": "https://placehold.co/600x400.png",
+      "imageHint": "charts graphs",
+      "tags": ["React", "D3.js", "Python", "Flask"],
+      "repoLink": "#"
+    },
+    {
+      "title": "AI Powered Chatbot",
+      "description": "A customer service chatbot utilizing natural language processing to understand and respond to user queries.",
+      "imageUrl": "https://placehold.co/600x400.png",
+      "imageHint": "chat interface",
+      "tags": ["Python", "NLP", "Dialogflow", "API"],
+      "liveLink": "#"
+    }
+  ]
+}

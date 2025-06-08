@@ -18,8 +18,9 @@ interface TimelineProps {
 const TimelineCardContent = ({ item, isLeftAligned }: { item: TimelineItemProps; isLeftAligned: boolean }) => (
   <div 
     className={cn(
-      "bg-card/15 backdrop-blur-lg border border-border/30 p-5 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 w-full",
-      !isLeftAligned && "text-right" // Align text content for right-sided cards
+      "glass-card p-5 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 w-full",
+      !isLeftAligned && "text-right", // Align text content for right-sided cards
+      "md:mx-0"
     )}
   >
     <p className="text-xs text-muted-foreground font-medium uppercase tracking-wider">{item.date}</p>
@@ -48,49 +49,58 @@ const TimelineCardContent = ({ item, isLeftAligned }: { item: TimelineItemProps;
 
 export function Timeline({ items }: TimelineProps) {
   return (
-    <div className="relative py-4"> {/* py-4 for top/bottom icon clearance */}
-      {/* Vertical line in the middle */}
-      <div 
-        className="absolute top-0 bottom-0 left-1/2 w-0.5 bg-border/30 transform -translate-x-1/2" 
-        aria-hidden="true" 
+    <div className="relative py-4 md:px-0 px-0"> {/* py-4 for top/bottom icon clearance, no horizontal padding */}
+      {/* Vertical line in the middle - dashed with rounded endings - hidden on mobile */}
+      <div
+        className="absolute top-0 bottom-0 left-1/2 border-l border-dashed border-border/30 -translate-x-1/2 after:content-[''] after:absolute after:top-0 after:left-0 after:w-2 after:h-2 after:bg-border/30 after:rounded-full after:-translate-x-1/2 before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-2 before:h-2 before:bg-border/30 before:rounded-full before:-translate-x-1/2 hidden md:block"
+        aria-hidden="true"
       />
 
       {items.map((item, index) => {
         const isLeftAligned = index % 2 === 0;
-        // Icon is 2.5rem (w-10), gap is 1.5rem (spacing-6). Half icon is 1.25rem (spacing-5).
-        // So, padding from center should be half icon + gap = 1.25rem + 1.5rem = 2.75rem (spacing-11)
-        const sidePadding = "px-[calc(theme(spacing.5)_+_theme(spacing.6))]"; // icon_radius (1.25rem) + gap (1.5rem)
-        
+        // Icon is 2.5rem (w-10), gap is 2.5rem (spacing-10). Half icon is 1.25rem (spacing-5).
+        // So, padding from center should be half icon + gap = 1.25rem + 2.5rem = 3.75rem
+        const sidePadding = "px-10"; // icon_radius (1.25rem) + gap (2.5rem)
+
         return (
-          <div 
-            key={index} 
+          <div
+            key={index}
             // Min height to ensure icon doesn't overlap with very short cards, mb-10 for item separation
-            className="mb-10 relative flex items-start justify-center min-h-[5rem]" 
+            className="mb-8 md:mb-10 relative flex items-center justify-center min-h-[5rem]"
           >
-            {/* Icon: Positioned on the central line, vertically aligned with the start of card content (approximated by top-5) */}
-            <div 
+            {/* Icon: Positioned on the central line, vertically centered relative to its card - hidden on mobile */}
+            <div
               className={cn(
-                "absolute left-1/2 top-5 transform -translate-x-1/2", // Position icon 1.25rem from top of item row
-                "w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center z-10 shadow-lg border-2 border-background"
+                "absolute md:left-1/2 left-5 -translate-y-1/2 md:-translate-x-1/2", // Center icon on timeline on md+, left aligned on mobile
+                "w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center z-10 shadow-lg border-2 border-background",
+                "hidden md:flex" // Hide on mobile, show on desktop
               )}
             >
-              <item.icon className="w-5 h-5" />
+              <item.icon className="w-4 h-4 flex-shrink-0" />
             </div>
 
-            {/* Left Slot for Card */}
+            {/* Mobile: Full width card, Desktop: Left/Right alternating cards */}
+            {/* For mobile: Only show this div and make it full width */}
             <div className={cn(
-              "w-1/2",
-              isLeftAligned ? sidePadding.replace("px","pr") : "pr-5", // Add gap from center line if card is here
-              {"invisible": !isLeftAligned} // Hide if not the current side
+              "w-full px-0 md:hidden" // Full width with no horizontal padding for mobile
+            )}>
+              <TimelineCardContent item={item} isLeftAligned={true} />
+            </div>
+
+            {/* Desktop: Left Slot for Card - hidden on mobile */}
+            <div className={cn(
+              "md:w-1/2 hidden md:block",
+              isLeftAligned ? sidePadding : "pr-5", // Add gap from center line if card is here
+              {"md:invisible": !isLeftAligned} // Hide if not the current side on desktop
             )}>
               {isLeftAligned && <TimelineCardContent item={item} isLeftAligned={true} />}
             </div>
 
-            {/* Right Slot for Card */}
+            {/* Desktop: Right Slot for Card - hidden on mobile */}
             <div className={cn(
-              "w-1/2",
-              !isLeftAligned ? sidePadding.replace("px","pl") : "pl-5", // Add gap from center line if card is here
-              {"invisible": isLeftAligned} // Hide if not the current side
+              "md:w-1/2 hidden md:block",
+              !isLeftAligned ? sidePadding : "pl-5", // Add gap from center line if card is here
+              {"md:invisible": isLeftAligned} // Hide if not the current side on desktop
             )}>
               {!isLeftAligned && <TimelineCardContent item={item} isLeftAligned={false} />}
             </div>

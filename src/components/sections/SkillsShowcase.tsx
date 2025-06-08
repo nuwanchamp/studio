@@ -1,43 +1,74 @@
 'use client';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
-import { ChartConfig, ChartContainer, ChartTooltip, ChartTooltipContent } from "@/components/ui/chart";
+import { getSkills } from '@/lib/contentManager';
+import { cn } from '@/lib/utils';
+import { useMemo } from 'react';
 
-const skillsData = [
-  { name: 'JavaScript', proficiency: 90, fill: "hsl(var(--chart-1))" },
-  { name: 'TypeScript', proficiency: 85, fill: "hsl(var(--chart-2))" },
-  { name: 'React/Next.js', proficiency: 90, fill: "hsl(var(--chart-1))" },
-  { name: 'Node.js', proficiency: 80, fill: "hsl(var(--chart-2))" },
-  { name: 'Python', proficiency: 75, fill: "hsl(var(--chart-3))" },
-  { name: 'SQL/NoSQL', proficiency: 80, fill: "hsl(var(--chart-4))" },
-  { name: 'Cloud (AWS/GCP)', proficiency: 70, fill: "hsl(var(--chart-5))" },
-  { name: 'Docker/K8s', proficiency: 65, fill: "hsl(var(--chart-3))" },
-];
+// Get skills data from content manager
+const skillsData = getSkills();
 
-const chartConfig = {
-  proficiency: {
-    label: "Proficiency (%)",
-    color: "hsl(var(--accent))",
-  },
-} satisfies ChartConfig;
+// Define types for skill data
+interface SkillItem {
+  name: string;
+  category: string;
+  fill: string;
+}
 
 export function SkillsShowcase() {
+  // Group skills by category
+  const skillsByCategory = useMemo(() => {
+    const categories: Record<string, SkillItem[]> = {};
+
+    skillsData.forEach(skill => {
+      if (!categories[skill.category]) {
+        categories[skill.category] = [];
+      }
+      categories[skill.category].push(skill);
+    });
+
+    return categories;
+  }, []);
+
+  // Get unique categories
+  const categories = useMemo(() => {
+    return Object.keys(skillsByCategory);
+  }, [skillsByCategory]);
+
   return (
-    <div className="w-full h-[400px] md:h-[500px]">
-      <ChartContainer config={chartConfig} className="h-full w-full">
-        <ResponsiveContainer width="100%" height="100%">
-          <BarChart data={skillsData} layout="vertical" margin={{ top: 20, right: 30, left: 20, bottom: 5 }}>
-            <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border)/0.5)" />
-            <XAxis type="number" domain={[0, 100]} stroke="hsl(var(--foreground)/0.7)" tickFormatter={(value) => `${value}%`} />
-            <YAxis dataKey="name" type="category" stroke="hsl(var(--foreground)/0.7)" width={120} interval={0} />
-            <Tooltip
-              cursor={{ fill: 'hsl(var(--muted)/0.3)' }}
-              content={<ChartTooltipContent indicator="dot" />}
-            />
-            <Legend wrapperStyle={{ color: 'hsl(var(--foreground)/0.7)' }}/>
-            <Bar dataKey="proficiency" radius={[0, 4, 4, 0]} />
-          </BarChart>
-        </ResponsiveContainer>
-      </ChartContainer>
+    <div className="w-full">
+      <div className="p-6 md:p-8 rounded-lg">
+        <h3 className="text-2xl font-headline font-semibold mb-6 text-center">Skills</h3>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {categories.map((category) => (
+            <div 
+              key={category}
+              className="glass-card p-5 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+            >
+              <h4 className="text-xl font-headline font-semibold mb-4 text-accent">{category}</h4>
+
+              <div className="flex flex-wrap gap-2">
+                {skillsByCategory[category].map((skill) => (
+                  <span 
+                    key={skill.name}
+                    className="px-3 py-1.5 rounded-full text-sm font-medium"
+                    style={{ 
+                      backgroundColor: skill.fill || 'hsl(var(--primary))',
+                      color: 'hsl(var(--primary-foreground))'
+                    }}
+                  >
+                    {skill.name}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Optional: Add a small caption or explanation */}
+        <p className="text-xs text-center text-muted-foreground mt-6">
+          Skills are grouped by category to showcase areas of expertise.
+        </p>
+      </div>
     </div>
   );
 }

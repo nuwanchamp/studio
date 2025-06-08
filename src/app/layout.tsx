@@ -2,6 +2,7 @@
 import type {Metadata} from 'next';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
+import { BackgroundIcons } from "@/components/shared/BackgroundIcons";
 
 export const metadata: Metadata = {
   title: 'ChronoFolio - Your Professional Timeline',
@@ -22,6 +23,7 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
       </head>
       <body className="font-body antialiased min-h-screen flex flex-col">
+        <BackgroundIcons />
         {children}
         <Toaster />
       </body>

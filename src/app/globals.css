@@ -3,125 +3,281 @@
 @tailwind utilities;
 
 @layer base {
-  :root {
-    /* Dark Blue Theme */
-    --background: 220 40% 10%;       /* Deep Indigo/Dark Blue */
-    --foreground: 220 60% 80%;       /* Light Blue Text */
+    :root {
+        /* Dark Blue Theme */
+        --background: 220 40% 10%; /* Deep Indigo/Dark Blue */
+        --foreground: 220 60% 80%; /* Light Blue Text */
 
-    /* Card styling for glassmorphism - base color is light, opacity applied in components */
-    --card: 220 25% 90%;              /* Very Light Cool Gray (base for glass) */
-    --card-foreground: 220 60% 80%;   /* Light Blue Text on cards */
+        /* Card styling for glassmorphism - base color is light, opacity applied in components */
+        --card: 220 25% 90%; /* Very Light Cool Gray (base for glass) */
+        --card-foreground: 220 60% 80%; /* Light Blue Text on cards */
 
-    --popover: 220 30% 12%;           /* Darker popover bg */
-    --popover-foreground: 220 60% 80%;/* Light Blue Text for popovers */
+        --popover: 220 30% 12%; /* Darker popover bg */
+        --popover-foreground: 220 60% 80%; /* Light Blue Text for popovers */
 
-    --primary: 190 85% 60%;           /* Vibrant Cyan/Teal */
-    --primary-foreground: 220 40% 10%;/* Dark text for primary */
+        --primary: 190 85% 60%; /* Vibrant Cyan/Teal */
+        --primary-foreground: 220 40% 10%; /* Dark text for primary */
 
-    --secondary: 220 20% 25%;         /* Darker shade for secondary elements */
-    --secondary-foreground: 220 50% 70%;/* Medium Blue Text for secondary elements */
+        --secondary: 220 20% 25%; /* Darker shade for secondary elements */
+        --secondary-foreground: 220 50% 70%; /* Medium Blue Text for secondary elements */
 
-    --muted: 220 15% 35%;
-    --muted-foreground: 220 40% 60%;  /* Muted Blue Text */
+        --muted: 220 15% 35%;
+        --muted-foreground: 220 40% 60%; /* Muted Blue Text */
 
-    --accent: 280 80% 70%;            /* Luminous Magenta/Purple */
-    --accent-foreground: 0 0% 100%;   /* White text for accent */
+        --accent: 280 80% 70%; /* Luminous Magenta/Purple */
+        --accent-foreground: 0 0% 100%; /* White text for accent */
 
-    --destructive: 0 70% 55%;
-    --destructive-foreground: 0 0% 98%;
+        --destructive: 0 70% 55%;
+        --destructive-foreground: 0 0% 98%;
 
-    /* Border for glassy cards - light, used with opacity */
-    --border: 210 20% 65%;
-    --input: 220 20% 20%;             /* Input background (dark blue) */
-    --ring: 190 85% 60%;              /* Ring color to match new primary */
+        /* Border for glassy cards - light, used with opacity */
+        --border: 210 20% 65%;
+        --input: 220 20% 20%; /* Input background (dark blue) */
+        --ring: 190 85% 60%; /* Ring color to match new primary */
 
-    /* Chart colors to complement the theme */
-    --chart-1: 190 85% 60%; /* Primary - Vibrant Cyan/Teal */
-    --chart-2: 280 80% 70%; /* Accent - Luminous Magenta/Purple */
-    --chart-3: 190 75% 50%; /* Darker Cyan/Teal */
-    --chart-4: 280 70% 60%; /* Darker Magenta/Purple */
-    --chart-5: 190 90% 75%; /* Lighter Cyan/Teal */
+        /* Chart colors to complement the theme */
+        --chart-1: 190 85% 60%; /* Primary - Vibrant Cyan/Teal */
+        --chart-2: 280 80% 70%; /* Accent - Luminous Magenta/Purple */
+        --chart-3: 190 75% 50%; /* Darker Cyan/Teal */
+        --chart-4: 280 70% 60%; /* Darker Magenta/Purple */
+        --chart-5: 190 90% 75%; /* Lighter Cyan/Teal */
 
-    --radius: 0.5rem;
+        --radius: 0.5rem;
 
-    /* Sidebar - keeping it relatively consistent with a dark, focused look */
-    --sidebar-background: 220 30% 8%;   /* Even darker for sidebar */
-    --sidebar-foreground: 210 25% 75%;  /* Darker sidebar text (cool gray) */
-    --sidebar-primary: 190 85% 60%;    /* Match new primary */
-    --sidebar-primary-foreground: 220 40% 10%;
-    --sidebar-accent: 220 20% 20%;
-    --sidebar-accent-foreground: 210 30% 80%; /* Darker sidebar accent text (cool gray) */
-    --sidebar-border: 220 20% 25%;
-    --sidebar-ring: 190 85% 60%;
-  }
+        /* Sidebar - keeping it relatively consistent with a dark, focused look */
+        --sidebar-background: 220 30% 8%; /* Even darker for sidebar */
+        --sidebar-foreground: 210 25% 75%; /* Darker sidebar text (cool gray) */
+        --sidebar-primary: 190 85% 60%; /* Match new primary */
+        --sidebar-primary-foreground: 220 40% 10%;
+        --sidebar-accent: 220 20% 20%;
+        --sidebar-accent-foreground: 210 30% 80%; /* Darker sidebar accent text (cool gray) */
+        --sidebar-border: 220 20% 25%;
+        --sidebar-ring: 190 85% 60%;
+    }
 
-  .dark {
-    /* Apply the same variables for .dark to ensure consistency */
-    --background: 220 40% 10%;
-    --foreground: 220 60% 80%;
-    --card: 220 25% 90%;
-    --card-foreground: 220 60% 80%;
-    --popover: 220 30% 12%;
-    --popover-foreground: 220 60% 80%;
-    --primary: 190 85% 60%;
-    --primary-foreground: 220 40% 10%;
-    --secondary: 220 20% 25%;
-    --secondary-foreground: 220 50% 70%;
-    --muted: 220 15% 35%;
-    --muted-foreground: 220 40% 60%;
-    --accent: 280 80% 70%;
-    --accent-foreground: 0 0% 100%;
-    --destructive: 0 70% 55%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 210 20% 65%;
-    --input: 220 20% 20%;
-    --ring: 190 85% 60%;
+    .dark {
+        /* Apply the same variables for .dark to ensure consistency */
+        --background: 220 40% 10%;
+        --foreground: 220 60% 80%;
+        --card: 220 25% 90%;
+        --card-foreground: 220 60% 80%;
+        --popover: 220 30% 12%;
+        --popover-foreground: 220 60% 80%;
+        --primary: 190 85% 60%;
+        --primary-foreground: 220 40% 10%;
+        --secondary: 220 20% 25%;
+        --secondary-foreground: 220 50% 70%;
+        --muted: 220 15% 35%;
+        --muted-foreground: 220 40% 60%;
+        --accent: 280 80% 70%;
+        --accent-foreground: 0 0% 100%;
+        --destructive: 0 70% 55%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 210 20% 65%;
+        --input: 220 20% 20%;
+        --ring: 190 85% 60%;
 
-    --chart-1: 190 85% 60%;
-    --chart-2: 280 80% 70%;
-    --chart-3: 190 75% 50%;
-    --chart-4: 280 70% 60%;
-    --chart-5: 190 90% 75%;
+        --chart-1: 190 85% 60%;
+        --chart-2: 280 80% 70%;
+        --chart-3: 190 75% 50%;
+        --chart-4: 280 70% 60%;
+        --chart-5: 190 90% 75%;
 
-    --sidebar-background: 220 30% 8%;
-    --sidebar-foreground: 210 25% 75%;
-    --sidebar-primary: 190 85% 60%;
-    --sidebar-primary-foreground: 220 40% 10%;
-    --sidebar-accent: 220 20% 20%;
-    --sidebar-accent-foreground: 210 30% 80%;
-    --sidebar-border: 220 20% 25%;
-    --sidebar-ring: 190 85% 60%;
-  }
+        --sidebar-background: 220 30% 8%;
+        --sidebar-foreground: 210 25% 75%;
+        --sidebar-primary: 190 85% 60%;
+        --sidebar-primary-foreground: 220 40% 10%;
+        --sidebar-accent: 220 20% 20%;
+        --sidebar-accent-foreground: 210 30% 80%;
+        --sidebar-border: 220 20% 25%;
+        --sidebar-ring: 190 85% 60%;
+    }
 }
 
 @layer base {
-  * {
-    @apply border-border; /* This will use the new --border definition */
-  }
-  body {
-    @apply bg-background text-foreground; /* Apply solid background and new text color */
-    /* background-image: url('/background-bokeh.jpg'); -- Removed */
-    /* background-size: cover; -- Removed */
-    /* background-position: center; -- Removed */
-    /* background-attachment: fixed; -- Removed */
-    /* background-repeat: no-repeat; -- Removed */
+    * {
+        @apply border-border;
+        /* This will use the new --border definition */
+    }
 
-    scrollbar-width: thin;
-    scrollbar-color: hsl(var(--accent)) hsl(var(--background)); /* Use new accent and a dark background color */
-  }
+    body {
+        @apply bg-background text-foreground;
+        background: linear-gradient(to bottom right, #050524, #232348);
+        scrollbar-width: thin;
+        scrollbar-color: hsl(var(--accent)) hsl(var(--background)); /* Use new accent and a dark background color */
+        position: relative;
+        overflow-x: hidden;
+    }
 
-  /* For Webkit browsers like Chrome, Safari */
-  body::-webkit-scrollbar {
-    width: 8px;
-  }
+    /* Glass card styling */
+    .glass-card {
+        @apply backdrop-blur-md border border-border/40 relative overflow-hidden;
+        background-color: hsla(221.5, 25.5%, 90%, 0.03);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    }
 
-  body::-webkit-scrollbar-track {
-    background: hsl(var(--background)); /* Dark track */
-  }
+    .glass-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -50%;
+        width: 100%;
+        height: 100%;
+            background: linear-gradient(
+                to right,
+                transparent,
+                rgba(255, 255, 255, 0.05),
+                transparent
+            );
+        transform: skewX(-15deg);
+        pointer-events: none;
+    }
 
-  body::-webkit-scrollbar-thumb {
-    background-color: hsl(var(--accent)); /* New accent for thumb */
-    border-radius: 10px;
-    border: 2px solid hsl(var(--background)); /* Dark border for thumb */
-  }
+    /* For Webkit browsers like Chrome, Safari */
+    body::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    body::-webkit-scrollbar-track {
+        background: hsl(var(--background)); /* Dark track */
+    }
+
+    body::-webkit-scrollbar-thumb {
+        background-color: hsl(var(--accent)); /* New accent for thumb */
+        border-radius: 10px;
+        border: 2px solid hsl(var(--background)); /* Dark border for thumb */
+    }
+
+    /* Background icons styling */
+    .background-icons {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: -1;
+        overflow: hidden;
+    }
+
+    .background-icon {
+        transition: transform 3s ease-in-out;
+    }
+
+    .background-icon:hover {
+        transform: rotate(360deg) scale(1.2);
+    }
+
+    /* Animation keyframes for floating icons */
+    @keyframes float-vertical {
+        0% {
+            transform: translateY(0) scale(1);
+        }
+        25% {
+            transform: translateY(15px) translateX(5px) scale(1.02);
+        }
+        50% {
+            transform: translateY(25px) translateX(-5px) scale(1.05);
+        }
+        75% {
+            transform: translateY(10px) translateX(8px) scale(1.02);
+        }
+        100% {
+            transform: translateY(0) scale(1);
+        }
+    }
+
+    @keyframes float-horizontal {
+        0% {
+            transform: translateX(0) scale(1);
+        }
+        25% {
+            transform: translateX(15px) translateY(5px) scale(1.03);
+        }
+        50% {
+            transform: translateX(25px) translateY(-8px) scale(1.05);
+        }
+        75% {
+            transform: translateX(10px) translateY(3px) scale(1.02);
+        }
+        100% {
+            transform: translateX(0) scale(1);
+        }
+    }
+
+    @keyframes float-diagonal {
+        0% {
+            transform: translate(0, 0) scale(1);
+        }
+        20% {
+            transform: translate(12px, 12px) scale(1.02);
+        }
+        40% {
+            transform: translate(20px, 5px) scale(1.04);
+        }
+        60% {
+            transform: translate(-5px, 15px) scale(1.05);
+        }
+        80% {
+            transform: translate(-12px, 8px) scale(1.03);
+        }
+        100% {
+            transform: translate(0, 0) scale(1);
+        }
+    }
+
+    @keyframes float-circular {
+        0% {
+            transform: translate(0, 0) scale(1);
+        }
+        25% {
+            transform: translate(15px, 10px) scale(1.02);
+        }
+        50% {
+            transform: translate(0, 20px) scale(1.04);
+        }
+        75% {
+            transform: translate(-15px, 10px) scale(1.02);
+        }
+        100% {
+            transform: translate(0, 0) scale(1);
+        }
+    }
+
+    /* Apply animations to icon classes */
+    .float-vertical {
+        animation-name: float-vertical;
+        animation-timing-function: ease-in-out;
+    }
+
+    .float-horizontal {
+        animation-name: float-horizontal;
+        animation-timing-function: ease-in-out;
+    }
+
+    .float-diagonal {
+        animation-name: float-diagonal;
+        animation-timing-function: ease-in-out;
+    }
+
+    .float-circular {
+        animation-name: float-circular;
+        animation-timing-function: ease-in-out;
+    }
+
+    /* Rotation animation for icons */
+    @keyframes spin {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    .icon-spin {
+        animation-name: spin;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
 }

@@ -2,20 +2,10 @@ import Image from 'next/image';
 import { User, Mail, Phone, Linkedin, MapPin, Briefcase } from 'lucide-react';
 import Link from 'next/link';
 import { ResumeDownloadButton } from '@/components/shared/ResumeDownloadButton';
+import { getProfile } from '@/lib/contentManager';
 
-const profileData = {
-  name: "Alex Johnson",
-  title: "Senior Software Engineer",
-  avatarUrl: "https://placehold.co/200x200.png",
-  avatarHint: "professional portrait",
-  bio: "A highly skilled and motivated Senior Software Engineer with over 8 years of experience in developing scalable web applications and leading engineering teams. Passionate about leveraging cutting-edge technologies to solve complex problems and deliver exceptional user experiences. Adept at full-stack development with a focus on robust backend systems and intuitive front-end interfaces.",
-  contact: {
-    email: "alex.johnson@example.com",
-    phone: "+1 (555) 123-4567",
-    linkedin: "https://www.linkedin.com/in/alexjohnsondev", // Example, replace with actual
-    location: "San Francisco, CA"
-  }
-};
+// Get profile data from content manager
+const profileData = getProfile();
 
 export function ProfileSummary() {
   return (
@@ -35,7 +25,7 @@ export function ProfileSummary() {
         <h1 className="font-headline text-4xl md:text-5xl font-extrabold text-primary mb-1">{profileData.name}</h1>
         <p className="font-headline text-xl text-accent mb-4">{profileData.title}</p>
         <p className="text-md text-foreground/80 mb-6 leading-relaxed">{profileData.bio}</p>
-        
+
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3 mb-8 text-sm">
           <div className="flex items-center justify-center md:justify-start gap-3 text-foreground/90">
             <Mail className="w-5 h-5 text-accent flex-shrink-0" />
