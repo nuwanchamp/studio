@@ -29,6 +29,7 @@ interface SkillItem {
   name: string;
   category: string;
   fill: string;
+  expertise: number;
 }
 
 interface WorkExperienceItem {

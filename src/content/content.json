@@ -13,14 +13,20 @@
     }
   },
   "skills": [
-    { "name": "JavaScript", "category": "Frontend", "fill": "hsl(var(--chart-1))" },
-    { "name": "TypeScript", "category": "Frontend", "fill": "hsl(var(--chart-2))" },
-    { "name": "React/Next.js", "category": "Frontend", "fill": "hsl(var(--chart-1))" },
-    { "name": "Node.js", "category": "Backend", "fill": "hsl(var(--chart-2))" },
-    { "name": "Python", "category": "Backend", "fill": "hsl(var(--chart-3))" },
-    { "name": "SQL/NoSQL", "category": "Database", "fill": "hsl(var(--chart-4))" },
-    { "name": "Cloud (AWS/GCP)", "category": "DevOps", "fill": "hsl(var(--chart-5))" },
-    { "name": "Docker/K8s", "category": "DevOps", "fill": "hsl(var(--chart-3))" }
+    { "name": "JavaScript", "category": "Frontend", "fill": "hsl(var(--chart-1))", "expertise": 85 },
+    { "name": "TypeScript", "category": "Node.js", "fill": "hsl(var(--chart-2))", "expertise": 80 },
+    { "name": "React/Next.js", "category": "Node.js", "fill": "hsl(var(--chart-1))", "expertise": 90 },
+    { "name": "Node.js", "category": "Backend", "fill": "hsl(var(--chart-2))", "expertise": 75 },
+    { "name": "Python", "category": "Backend", "fill": "hsl(var(--chart-3))", "expertise": 85 },
+    { "name": "PyTest", "category": "Python", "fill": "hsl(var(--chart-3))", "expertise": 85 },
+    { "name": "Flask", "category": "Python", "fill": "hsl(var(--chart-3))", "expertise": 40 },
+    { "name": "PHP", "category": "Backend", "fill": "hsl(var(--chart-3))", "expertise": 90 },
+    { "name": "Laravel", "category": "PHP", "fill": "hsl(var(--chart-3))", "expertise": 85 },
+    { "name": "Symfony", "category": "PHP", "fill": "hsl(var(--chart-3))", "expertise": 75 },
+    { "name": "PEST", "category": "Laravel", "fill": "hsl(var(--chart-3))", "expertise": 70 },
+    { "name": "SQL/NoSQL", "category": "Database", "fill": "hsl(var(--chart-4))", "expertise": 85 },
+    { "name": "Cloud (AWS/GCP)", "category": "DevOps", "fill": "hsl(var(--chart-5))", "expertise": 65 },
+    { "name": "Docker/K8s", "category": "DevOps", "fill": "hsl(var(--chart-3))", "expertise": 60 }
   ],
   "workExperience": [
     {
