@@ -10,26 +10,24 @@ export function ProjectsPortfolio() {
   const projectsData = getProjects();
 
   return (
-    <div className="space-y-16">
+    <div className="space-y-20 md:space-y-28"> {/* Increased spacing between projects */}
       {projectsData.map((project, index) => (
         <div
           key={index}
-          className={cn(
-            "group grid grid-cols-1 md:grid-cols-5 gap-6 md:gap-8 items-center",
-            "transition-all duration-300"
-          )}
+          className="group grid grid-cols-1 md:grid-cols-5 gap-6 md:gap-0 items-center"
         >
           {/* Image container */}
           <div
             className={cn(
-              "md:col-span-3 aspect-video relative w-full overflow-hidden rounded-lg shadow-xl glass-card",
-              index % 2 !== 0 && "md:order-last" // Alternate image position
+              "md:col-span-3 aspect-video relative w-full overflow-hidden rounded-lg shadow-xl",
+              "transition-all duration-500",
+              index % 2 === 0 ? "md:col-start-1" : "md:col-start-3" // Alternate start column
             )}
           >
             <Image
               src={project.imageUrl}
               alt={project.title}
-              layout="fill"
+              fill={true}
               objectFit="cover"
               className="transition-transform duration-500 group-hover:scale-105"
               data-ai-hint={project.imageHint}
@@ -40,35 +38,45 @@ export function ProjectsPortfolio() {
           {/* Text content container */}
           <div
             className={cn(
-              "md:col-span-2 flex flex-col justify-center",
-              index % 2 !== 0 ? "md:text-right md:items-end" : "md:text-left md:items-start" // Alternate text alignment
+              "md:col-span-3 z-10",
+              // Logic for alternating layout
+              index % 2 === 0 
+                ? "md:col-start-3 md:-ml-12" 
+                : "md:col-start-1 md:row-start-1 md:-mr-12"
             )}
           >
-            <h3 className="font-headline text-2xl md:text-3xl font-bold text-accent mb-3">{project.title}</h3>
-            
-            <p className="text-foreground/80 leading-relaxed mb-4">{project.description}</p>
-
-            <div className={cn("flex flex-wrap gap-2 mb-6", index % 2 !== 0 ? "md:justify-end" : "md:justify-start")}>
-              {project.tags.map(tag => (
-                <span key={tag} className="px-3 py-1 text-xs bg-secondary text-secondary-foreground rounded-full font-medium">{tag}</span>
-              ))}
-            </div>
-
-            <div className={cn("flex gap-4 mt-auto", index % 2 !== 0 ? "md:justify-end" : "md:justify-start")}>
-              {project.liveLink && (
-                <Button asChild variant="outline" className="border-accent text-accent hover:bg-accent hover:text-accent-foreground transition-colors duration-300">
-                  <Link href={project.liveLink} target="_blank" rel="noopener noreferrer">
-                    <ExternalLink className="mr-2 h-4 w-4" /> Live Demo
-                  </Link>
-                </Button>
+            <div
+              className={cn(
+                "glass-card p-6 rounded-lg shadow-2xl",
+                index % 2 === 0 ? "md:text-left" : "md:text-right"
               )}
-              {project.repoLink && (
-                <Button asChild variant="ghost" className="text-foreground/70 hover:text-accent hover:bg-transparent transition-colors duration-300">
-                  <Link href={project.repoLink} target="_blank" rel="noopener noreferrer">
-                    <Github className="mr-2 h-4 w-4" /> View Code
-                  </Link>
-                </Button>
-              )}
+            >
+              <p className={cn("text-xs font-semibold text-primary uppercase tracking-wider mb-2", index % 2 !== 0 && "md:justify-end")}>
+                Featured Project
+              </p>
+              <h3 className="font-headline text-2xl md:text-3xl font-bold text-accent mb-3">{project.title}</h3>
+              <p className="text-foreground/80 leading-relaxed mb-4">{project.description}</p>
+              <div className={cn("flex flex-wrap gap-2 mb-6", index % 2 !== 0 ? "md:justify-end" : "md:justify-start")}>
+                {project.tags.map(tag => (
+                  <span key={tag} className="px-3 py-1 text-xs bg-secondary text-secondary-foreground rounded-full font-medium">{tag}</span>
+                ))}
+              </div>
+              <div className={cn("flex gap-4", index % 2 !== 0 ? "md:justify-end" : "md:justify-start")}>
+                {project.liveLink && (
+                  <Button asChild variant="outline" size="sm" className="border-accent text-accent hover:bg-accent hover:text-accent-foreground transition-colors duration-300">
+                    <Link href={project.liveLink} target="_blank" rel="noopener noreferrer">
+                      <ExternalLink className="mr-1.5 h-4 w-4" /> Live Demo
+                    </Link>
+                  </Button>
+                )}
+                {project.repoLink && (
+                  <Button asChild variant="ghost" size="sm" className="text-foreground/70 hover:text-accent hover:bg-transparent transition-colors duration-300">
+                    <Link href={project.repoLink} target="_blank" rel="noopener noreferrer">
+                      <Github className="mr-1.5 h-4 w-4" /> View Code
+                    </Link>
+                  </Button>
+                )}
+              </div>
             </div>
           </div>
         </div>
