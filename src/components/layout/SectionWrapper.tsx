@@ -13,7 +13,7 @@ export function SectionWrapper({ title, children, className, id }: SectionWrappe
     <section id={id} className={cn('py-16 md:py-20 scroll-mt-20', className)}> {/* scroll-mt for sticky header offset */}
       <div className="container mx-auto px-4 md:px-6">
         <h2 className="font-headline text-3xl md:text-4xl font-bold mb-10 md:mb-14 text-center text-primary">{title}</h2>
-        <div className="glass-card rounded-xl p-6 md:p-4 shadow-2xl">
+        <div className="glass-card rounded-xl p-6 md:p-8 shadow-2xl">
           {children}
         </div>
       </div>

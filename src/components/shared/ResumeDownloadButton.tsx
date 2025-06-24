@@ -7,10 +7,10 @@ export function ResumeDownloadButton() {
   const { toast } = useToast();
 
   const handleDownload = () => {
-    // In a real app, ensure 'resume_placeholder.pdf' exists in the /public directory
+    // In a real app, ensure 'nuwan-c-perera-06-2025.pdf' exists in the /public directory
     const link = document.createElement('a');
-    link.href = '/resume_placeholder.pdf'; // User should replace this with their actual resume file
-    link.download = 'YourName_Resume.pdf'; // User should customize the downloaded file name
+    link.href = '/nuwan-c-perera-06-2025.pdf'; // User should replace this with their actual resume file
+    link.download = 'Nuwan_C_Perera_Resume.pdf'; // User should customize the downloaded file name
     
     // Check if file exists (rudimentary check, server-side check is more reliable)
     // For this example, we assume it exists or will be added by the user.

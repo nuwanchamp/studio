@@ -1,9 +1,8 @@
-
 {
   "profile": {
     "name": "Nuwan C. Perera",
     "title": "Senior Software Engineer",
-    "avatarUrl": "https://placehold.co/200x200.png",
+    "avatarUrl": "/nuwan-profile.jpeg",
     "avatarHint": "professional portrait",
     "bio": "Senior Software Engineer with 8+ years of experience specializing in backend systems using PHP (Symfony, Laravel), Python, and Linux scripting. Proven track record in building real-time monitoring tools, VoIP integration (CUCM via AXL/SXL), and automating subnet scanning with SNMP. Strong advocate of SOLID, TDD, DDD, and CI/CD. Adept at designing scalable microservices and infrastructure-aware applications in enterprise-grade environments.",
     "contact": {
@@ -14,20 +13,90 @@
     }
   },
   "skills": [
-    { "name": "JavaScript", "category": "Frontend", "fill": "hsl(var(--chart-1))", "expertise": 85 },
-    { "name": "TypeScript", "category": "Node.js", "fill": "hsl(var(--chart-2))", "expertise": 80 },
-    { "name": "React/Next.js", "category": "Node.js", "fill": "hsl(var(--chart-1))", "expertise": 90 },
-    { "name": "Node.js", "category": "Backend", "fill": "hsl(var(--chart-2))", "expertise": 75 },
-    { "name": "Python", "category": "Backend", "fill": "hsl(var(--chart-3))", "expertise": 85 },
-    { "name": "PyTest", "category": "Python", "fill": "hsl(var(--chart-3))", "expertise": 85 },
-    { "name": "Flask", "category": "Python", "fill": "hsl(var(--chart-3))", "expertise": 40 },
-    { "name": "PHP", "category": "Backend", "fill": "hsl(var(--chart-3))", "expertise": 90 },
-    { "name": "Laravel", "category": "PHP", "fill": "hsl(var(--chart-3))", "expertise": 85 },
-    { "name": "Symfony", "category": "PHP", "fill": "hsl(var(--chart-3))", "expertise": 75 },
-    { "name": "PEST", "category": "Laravel", "fill": "hsl(var(--chart-3))", "expertise": 70 },
-    { "name": "SQL/NoSQL", "category": "Database", "fill": "hsl(var(--chart-4))", "expertise": 85 },
-    { "name": "Cloud (AWS/GCP)", "category": "DevOps", "fill": "hsl(var(--chart-5))", "expertise": 65 },
-    { "name": "Docker/K8s", "category": "DevOps", "fill": "hsl(var(--chart-3))", "expertise": 60 }
+    {
+      "name": "JavaScript",
+      "category": "Frontend",
+      "fill": "hsl(var(--chart-1))",
+      "expertise": 85
+    },
+    {
+      "name": "TypeScript",
+      "category": "Node.js",
+      "fill": "hsl(var(--chart-2))",
+      "expertise": 80
+    },
+    {
+      "name": "React/Next.js",
+      "category": "Node.js",
+      "fill": "hsl(var(--chart-1))",
+      "expertise": 90
+    },
+    {
+      "name": "Node.js",
+      "category": "Backend",
+      "fill": "hsl(var(--chart-2))",
+      "expertise": 75
+    },
+    {
+      "name": "Python",
+      "category": "Backend",
+      "fill": "hsl(var(--chart-3))",
+      "expertise": 85
+    },
+    {
+      "name": "PyTest",
+      "category": "Python",
+      "fill": "hsl(var(--chart-3))",
+      "expertise": 85
+    },
+    {
+      "name": "Flask",
+      "category": "Python",
+      "fill": "hsl(var(--chart-3))",
+      "expertise": 40
+    },
+    {
+      "name": "PHP",
+      "category": "Backend",
+      "fill": "hsl(var(--chart-3))",
+      "expertise": 90
+    },
+    {
+      "name": "Laravel",
+      "category": "PHP",
+      "fill": "hsl(var(--chart-3))",
+      "expertise": 85
+    },
+    {
+      "name": "Symfony",
+      "category": "PHP",
+      "fill": "hsl(var(--chart-3))",
+      "expertise": 75
+    },
+    {
+      "name": "PEST",
+      "category": "Laravel",
+      "fill": "hsl(var(--chart-3))",
+      "expertise": 70
+    },
+    {
+      "name": "SQL/NoSQL",
+      "category": "Database",
+      "fill": "hsl(var(--chart-4))",
+      "expertise": 85
+    },
+    {
+      "name": "Cloud (AWS/GCP)",
+      "category": "DevOps",
+      "fill": "hsl(var(--chart-5))",
+      "expertise": 65
+    },
+    {
+      "name": "Docker/K8s",
+      "category": "DevOps",
+      "fill": "hsl(var(--chart-3))",
+      "expertise": 60
+    }
   ],
   "workExperience": [
     {
@@ -40,22 +109,55 @@
         "Led and enhanced a legacy subnet scanning method in the monitoring system by developing it as an installable module, supporting multiple scanning providers such as SNMP and ESXi using an event-driven architecture with high modularity. This reduced initial setup workload by over 30% and improved client experience by more than 10%.",
         "Engineered a custom RHEL repository for multiple binaries required by the monitoring system, significantly reducing the workload during initial setup."
       ],
-      "tags": ["Node.js", "React", "TypeScripts", "Jotai", "Micro-Frontend", "Symfony", "REHL"]
+      "tags": [
+        "Node.js",
+        "React",
+        "TypeScripts",
+        "Jotai",
+        "Micro-Frontend",
+        "Symfony",
+        "REHL"
+      ]
+    },
+    {
+      "date": "May 2023 - Jun 2025",
+      "title": "Senior Application Developer",
+      "subtitle": "Intervest Technologies Pvt Ltd",
+      "description": [
+        "Implemented a logging subsystem and an environment-based content comparison tool within a Laravel package, enhancing debugging capabilities for QA and developers and improving productivity by 15%.",
+        "Led the design and development of a manual policy renewal subsystem for a travel insurance solution, ensuring backward compatibility, modular architecture, and adherence to SOLID principles.",
+        "Contributed to a Laravel package used as a white-label solution for travel insurance, following TDD, semantic versioning, and best practices to ensure minimal downtime and maintainability."
+      ],
+      "tags": [
+        "Laravel package",
+        "Livewire",
+        "White Label Solutions",
+        "Design Patterns",
+        "Micro Services",
+        "Alpine",
+        "Tailwind"
+      ]
     },
     {
       "date": "Feb 2017 - Mar 2023",
       "title": "Senior Application Developer",
       "subtitle": "Seneview Technologies Pvt Ltd",
       "description": [
-         "Implemented a logging subsystem and an environment-based content comparison tool within a Laravel package, enhancing debugging capabilities for QA and developers and improving productivity by 15%.",
-        "Led the design and development of a manual policy renewal subsystem for a travel insurance solution, ensuring backward compatibility, modular architecture, and adherence to SOLID principles.",
-        "Contributed to a Laravel package used as a white-label solution for travel insurance, following TDD, semantic versioning, and best practices to ensure minimal downtime and maintainability.",
         "Engineered a custom portal for a Purchasing Order System for a supply company, significantly improving their productivity.",
         "Led the development of an intranet application using Flutter, which contributed to a substantial revenue increase for a consulting firm.",
         "Skilled in API development using Postman and PHP unit testing, with experience in test automation using Selenium.",
         "Proficient in Laravel package development, WordPress plugin creation, and theme development."
       ],
-      "tags": ["Laravel package", "Livewire", "White Label Solutions", "Design Patterns", "Micro Services", "Alpine","Tailwind", "WordPress"]
+      "tags": [
+        "Laravel package",
+        "Livewire",
+        "White Label Solutions",
+        "Design Patterns",
+        "Micro Services",
+        "Alpine",
+        "Tailwind",
+        "WordPress"
+      ]
     },
     {
       "date": "Jan 2016 - Feb 2017",
@@ -65,7 +167,14 @@
         "Developed websites using Bootstrap, PHP OOP, and the CakePHP framework, enhancing user experience and performance.",
         "Designed and launched three informative websites using WordPress and Photoshop, significantly increasing brand visibility."
       ],
-      "tags": ["HTML", "CSS", "JavaScript", "PHP", "WordPress", "Photoshop"]
+      "tags": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "PHP",
+        "WordPress",
+        "Photoshop"
+      ]
     }
   ],
   "education": [
@@ -74,90 +183,218 @@
       "title": "Bsc(Hons) Computer Science",
       "subtitle": "Coventry University",
       "description": "Focused on Artificial Intelligence and Machine Learning. Thesis on Natural Language Processing.",
-      "tags": ["AI", "Machine Learning", "NLP", "Thesis"]
+      "tags": [
+        "AI",
+        "Machine Learning",
+        "NLP",
+        "Thesis"
+      ]
     },
     {
       "date": "2014 - 2015",
       "title": "Diploma in Computer System Design",
       "subtitle": "National Institute of Business Management",
       "description": "Graduated with a 3.98 GPU.",
-      "tags": ["Software Engineering", "Data Structures", "Algorithms"]
+      "tags": [
+        "Software Engineering",
+        "Data Structures",
+        "Algorithms"
+      ]
     }
   ],
   "certifications": [
     {
-      "name": "AWS Certified Solutions Architect - Associate",
-      "organization": "Amazon Web Services",
-      "date": "Issued: March 2022",
-      "imageUrl": "https://placehold.co/100x100.png",
-      "imageHint": "aws logo",
-      "link": "#"
+      "name": "Career Essential in GitHub Professional Certificate",
+      "organization": "Github & Linkedin",
+      "date": "Issued: June 2025",
+      "imageUrl": "https://media.licdn.com/dms/image/v2/C560BAQFmuLSyL1nlPA/company-logo_100_100/company-logo_100_100/0/1678231359044/github_logo?e=1756339200&v=beta&t=2m5y9vgJ9_vk3MDGUuPQ_sf0lcI6QOhCfN4UgLSiRDk",
+      "imageHint": "Github logo",
+      "link": "https://www.linkedin.com/learning/certificates/d0d6920d8645a76056c9a1f9cd8116b734e8abc5c6f46b80e3cfe4224f88d307?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3B4wKyBs2PTXm8kLxE3Ss5bw%3D%3D"
     },
     {
-      "name": "Certified Kubernetes Administrator (CKA)",
-      "organization": "The Linux Foundation",
-      "date": "Issued: July 2021",
-      "imageUrl": "https://placehold.co/100x100.png",
-      "imageHint": "kubernetes logo",
-      "link": "#"
+      "name": "\nDocker Foundations Professional Certificate",
+      "organization": "Docker Inc",
+      "date": "Issued: June 2025",
+      "imageUrl": "https://media.licdn.com/dms/image/v2/D4E0BAQFWt4Tl53wjZQ/company-logo_100_100/company-logo_100_100/0/1705960989383/docker_logo?e=1756339200&v=beta&t=9dDiR4l7L6hy_Cv_i0qfyajkwuESMdDlKTcIKGfW6IU",
+      "imageHint": "Docker logo",
+      "link": "https://www.linkedin.com/learning/certificates/b942f70902b46156d15cefaaa6c99bb3cab7f57543e3d7c87539cf0a8c01a313?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3B4wKyBs2PTXm8kLxE3Ss5bw%3D%3D"
     },
     {
-      "name": "Professional Scrum Master I (PSM I)",
-      "organization": "Scrum.org",
-      "date": "Issued: January 2020",
-      "imageUrl": "https://placehold.co/100x100.png",
-      "imageHint": "scrum logo",
+      "name": "Speech crafter Certification",
+      "organization": "Readers Toastmasters Club",
+      "date": "Issued: December 2024",
+      "imageUrl": "https://www.toastmasters.org/content/images/globals/toastmasters-logo@2x.png",
+      "imageHint": "Toastmasters logo",
       "link": "#"
     }
   ],
   "projects": [
     {
-      "title": "E-commerce Platform",
-      "description": "A full-featured e-commerce platform with product listings, shopping cart, user authentication, and payment integration.",
-      "imageUrl": "https://placehold.co/600x400.png",
+      "title": "Network Discovery Module – Monitoring System",
+      "description": "Developed an extensible network discovery module for the company’s monitoring platform, enabling multiple scanning protocols and significantly improving the first time setup experience for system integrator and operators.",
+      "imageUrl": "/images/projects/network-discovery-module.svg",
       "imageHint": "online store",
-      "tags": ["React", "Node.js", "MongoDB", "Stripe"],
+      "tags": [
+        "SNMP",
+        "EXSI",
+        "ZeroMQ  ",
+        "React",
+        "Python",
+        "Socket Programing",
+        "Symfony",
+        "Linux"
+      ],
       "liveLink": "#",
       "repoLink": "#"
     },
     {
-      "title": "Task Management App",
-      "description": "A collaborative task management application with boards, lists, and cards, inspired by Trello. Features real-time updates and drag-and-drop functionality.",
-      "imageUrl": "https://placehold.co/600x600.png",
+      "title": "Plugin Framework – Monitoring System",
+      "description": "Developed a modular plugin framework to enhance and extend the capabilities of the company's monitoring system, enabling scalable feature development and UI-driven plugin management.",
+      "imageUrl": "/images/projects/plugin-framework.svg",
       "imageHint": "task board",
-      "tags": ["Vue.js", "Firebase", "Realtime DB"],
+      "tags": [
+        "Symfony",
+        "Yup",
+        "Jotai",
+        "Webpack Module Federation",
+        "Micro-Frontend",
+        "Modular Development",
+        "RestAPI"
+      ],
       "liveLink": "#"
     },
     {
-      "title": "Data Visualization Dashboard",
-      "description": "An interactive dashboard for visualizing complex datasets, built with D3.js and React. Includes various chart types and filtering options.",
-      "imageUrl": "https://placehold.co/600x450.png",
+      "title": "Cartwheel Project – White-Label eCommerce Platform",
+      "description": "Designed and developed a white-label eCommerce platform built on WordPress, tailored for Sri Lankan SMEs. Engineered a modular, replicable eCommerce framework allowing quick setup of individual client instances with custom-built plugins for inventory, product displays, and local payment integration. Reduced onboarding time by 60% and enabled cost-effective deployment of eCommerce sites aligned with unique client workflows.",
+      "imageUrl": "/images/projects/cartwheel-ecommerce.svg",
+      "imageHint": "ecommerce platform",
+      "tags": [
+        "WordPress Development",
+        "Custom WordPress Plugins",
+        "SCSS",
+        "jQuery",
+        "MySQL",
+        "WordPress Hooks & Filters",
+        "Inventory System Development",
+        "Reusable Architecture",
+        "Configuration-Driven Deployment",
+        "Client-Specific Customization",
+        "Modular Solution Design"
+      ],
+      "repoLink": "#"
+    },
+    {
+      "title": "VoIP Phones Monitoring – CUCM Integration Module",
+      "description": "Developed a centralized VoIP monitoring module for Cisco Unified Communication Manager (CUCM) clusters, enabling real-time visibility of over 5000 IP phones across enterprise networks.",
+      "imageUrl": "/images/projects/voip-monitoring.svg",
       "imageHint": "charts graphs",
-      "tags": ["React", "D3.js", "Python", "Flask"],
+      "tags": [
+        "AXL/SXL API",
+        "Risport API",
+        "React",
+        "Symfony",
+        "ZeroMQ",
+        "TDD",
+        "SOLID Principles",
+        "Real-Time Monitoring"
+      ],
       "repoLink": "#"
     },
     {
-      "title": "AI Powered Chatbot",
-      "description": "A customer service chatbot utilizing natural language processing to understand and respond to user queries, integrated with a live agent handoff system.",
-      "imageUrl": "https://placehold.co/600x500.png",
+      "title": "3E Mobile App – Intranet-to-Mobile Bridge",
+      "description": "Developed a cross-platform mobile application to extend a WordPress-based intranet solution into a user-friendly mobile interface for internal clients and stakeholders. The app featured GetX for responsive state management, platform compatibility with Android and iOS, and user friendly UI for clients. Successfully expanded client's intranet to mobile platforms with minimal disruption and improved internal communication efficiency.",
+      "imageUrl": "/images/projects/3e-mobile-app.svg",
+      "imageHint": "mobile app interface",
+      "tags": [
+        "Flutter",
+        "Dart",
+        "GetX",
+        "WordPress REST API",
+        "API Integration",
+        "Cross-Platform Mobile Development",
+        "Mobile UI Design",
+        "Postman",
+        "Swagger",
+        "State Management",
+        "Prototyping"
+      ],
+      "repoLink": "#"
+    },
+    {
+      "title": "Manual Renewal System – Insure Package",
+      "description": "Designed and developed a manual policy renewal system for annual trip insurance holders who were not enrolled in auto-renewal, enabling them to renew policies directly through the admin and customer facing workflows.",
+      "imageUrl": "/images/projects/manual-renewal-system.svg",
       "imageHint": "chat interface",
-      "tags": ["Python", "NLP", "Dialogflow", "API"],
+      "tags": [
+        "Laravel",
+        "Livewire",
+        "Alpine JS",
+        "Tailwind",
+        "REST API",
+        "Laravel Package",
+        "TDD"
+      ],
       "liveLink": "#"
     },
     {
-      "title": "Recipe Finder App",
-      "description": "A mobile-friendly application that allows users to find recipes based on ingredients they have at home. Features a clean, minimalist UI.",
-      "imageUrl": "https://placehold.co/600x700.png",
+      "title": "Logging System – Insure Package Admin Portal",
+      "description": "Developed an advanced API interaction logging and review system to streamline debugging and QA collaboration for the Insure Package's admin portal.",
+      "imageUrl": "/images/projects/logging-system.svg",
       "imageHint": "food cooking",
-      "tags": ["Flutter", "Dart", "Firebase", "API"],
+      "tags": [
+        "PHP Generators",
+        "Laravel",
+        "Livewire",
+        "Alpine JS",
+        "Tailwind",
+        "REST API"
+      ],
       "repoLink": "#"
     },
     {
-      "title": "Personal Blog Platform",
-      "description": "A lightweight, markdown-based blogging platform built with a static site generator for optimal performance and security.",
-      "imageUrl": "https://placehold.co/600x350.png",
+      "title": "Purchase Order System – Custom Procurement Platform for MAS Supply Chain",
+      "description": "Engineered a fully automated, web-based procurement solution tailored to the operational workflows of Hellmann MAS, a primary supply chain partner of MAS Holdings.",
+      "imageUrl": "/images/projects/purchase-order-system.svg",
+      "imageHint": "food cooking",
+      "tags": [
+        "WordPress API",
+        "CodeIgniter",
+        "REST API",
+        "PHP",
+        "MySQL",
+        "Access Control Logic",
+        "Middleware Architecture",
+        "Event-Driven Design",
+        "Procurement Automation",
+        "Agile Development",
+        "Workflow Automation",
+        "Process Bottleneck Detection",
+        "TDD"
+      ],
+      "repoLink": "#"
+    },
+    {
+      "title": "Insure Package – White-Label Travel Insurance Platform",
+      "description": "An enterprise grade white-label travel insurance platform deployed by multiple insurance companies across the UK. The system supports customer Quote journey, policy management, and claims handling in a highly modular and customizable form.",
+      "imageUrl": "/images/projects/insure-package.svg",
       "imageHint": "writing blog",
-      "tags": ["Next.js", "Markdown", "Tailwind CSS", "Vercel"],
+      "tags": [
+        "Laravel",
+        "Livewire",
+        "AlpineJS",
+        "Tailwind CSS",
+        "TDD",
+        "Domain Driven Design",
+        "Design Patterns",
+        "Code Review",
+        "Agile Practices",
+        "Jira",
+        "Azure DevOps",
+        "Optimizely",
+        "Hotjar",
+        "BAU Development",
+        "User Testing & Experimentation"
+      ],
       "liveLink": "#"
     }
   ]
