@@ -93,8 +93,6 @@ export function SkillsShowcase() {
         borderWidth: 1.5,
         borderWidthSelected: 3,
         shadow: true,
-        shadowColor: 'rgba(0, 0, 128, 0.3)', // Bluish shadow
-        shadowSize: 5,
         shape: 'dot',
         scaling: {
           min: 10,
