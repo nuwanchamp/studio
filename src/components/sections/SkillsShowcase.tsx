@@ -113,8 +113,10 @@ export function SkillsShowcase() {
         width: 1.5,
         selectionWidth: 2,
         smooth: {
+          enabled: true,
           type: 'continuous',
-          forceDirection: 'horizontal'
+          forceDirection: 'horizontal',
+          roundness: 0.5
         },
         color: {
           inherit: false,
