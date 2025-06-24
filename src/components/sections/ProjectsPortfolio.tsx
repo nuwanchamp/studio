@@ -10,7 +10,7 @@ export function ProjectsPortfolio() {
   const projectsData = getProjects();
 
   return (
-    <div className="space-y-20 md:space-y-28"> {/* Increased spacing between projects */}
+    <div className="space-y-20 md:space-y-28">
       {projectsData.map((project, index) => (
         <div
           key={index}
@@ -28,8 +28,7 @@ export function ProjectsPortfolio() {
               src={project.imageUrl}
               alt={project.title}
               fill={true}
-              objectFit="cover"
-              className="transition-transform duration-500 group-hover:scale-105"
+              className="object-cover transition-transform duration-500 group-hover:scale-105"
               data-ai-hint={project.imageHint}
             />
              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
@@ -72,7 +71,7 @@ export function ProjectsPortfolio() {
                 {project.repoLink && (
                   <Button asChild variant="ghost" size="sm" className="text-foreground/70 hover:text-accent hover:bg-transparent transition-colors duration-300">
                     <Link href={project.repoLink} target="_blank" rel="noopener noreferrer">
-                      <Github className="mr-1.5 h-4 w-4" /> View Code
+                      <Github className="mr-1.5 h-4 w-4" /> Code
                     </Link>
                   </Button>
                 )}

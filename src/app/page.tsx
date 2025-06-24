@@ -22,7 +22,6 @@ export default function HomePage() {
         <section id="experience" className="py-16 md:py-20 scroll-mt-20">
           <div className="container mx-auto px-4 md:px-6">
             <h2 className="font-headline text-3xl md:text-4xl font-bold mb-10 md:mb-14 text-center text-primary">Work Experience</h2>
-            {/* WorkExperience component rendered directly without the panel div */}
             <WorkExperience />
           </div>
         </section>
@@ -31,7 +30,6 @@ export default function HomePage() {
         <section id="education" className="py-16 md:py-20 scroll-mt-20">
           <div className="container mx-auto px-4 md:px-6">
             <h2 className="font-headline text-3xl md:text-4xl font-bold mb-10 md:mb-14 text-center text-primary">Education</h2>
-            {/* Education component rendered directly without the panel div */}
             <Education />
           </div>
         </section>
@@ -40,9 +38,13 @@ export default function HomePage() {
           <SkillsShowcase />
         </SectionWrapper>
 
-        <SectionWrapper title="Projects Portfolio" id="projects">
-          <ProjectsPortfolio />
-        </SectionWrapper>
+        {/* Custom structure for Projects to remove the outer panel */}
+        <section id="projects" className="py-16 md:py-20 scroll-mt-20">
+          <div className="container mx-auto px-4 md:px-6">
+            <h2 className="font-headline text-3xl md:text-4xl font-bold mb-10 md:mb-14 text-center text-primary">Projects Portfolio</h2>
+            <ProjectsPortfolio />
+          </div>
+        </section>
 
         <SectionWrapper title="Licenses & Certifications" id="certifications">
           <CertificationsDisplay />
