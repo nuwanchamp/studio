@@ -38,13 +38,9 @@ export default function HomePage() {
           <SkillsShowcase />
         </SectionWrapper>
 
-        {/* Custom structure for Projects to remove the outer panel */}
-        <section id="projects" className="py-16 md:py-20 scroll-mt-20">
-          <div className="container mx-auto px-4 md:px-6">
-            <h2 className="font-headline text-3xl md:text-4xl font-bold mb-10 md:mb-14 text-center text-primary">Projects Portfolio</h2>
-            <ProjectsPortfolio />
-          </div>
-        </section>
+        <SectionWrapper title="Projects Portfolio" id="projects">
+          <ProjectsPortfolio />
+        </SectionWrapper>
 
         <SectionWrapper title="Licenses & Certifications" id="certifications">
           <CertificationsDisplay />
