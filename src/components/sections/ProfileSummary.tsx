@@ -3,6 +3,7 @@ import { User, Mail, Phone, Linkedin, MapPin, Briefcase } from 'lucide-react';
 import Link from 'next/link';
 import { ResumeDownloadButton } from '@/components/shared/ResumeDownloadButton';
 import { getProfile } from '@/lib/contentManager';
+import { getImagePath } from '@/lib/imageUtils';
 
 // Get profile data from content manager
 const profileData = getProfile();
@@ -12,7 +13,7 @@ export function ProfileSummary() {
     <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16 py-4 md:py-8">
       <div className="flex-shrink-0 w-full md:w-auto flex justify-center items-center p-6 md:p-8">
         <Image
-          src={profileData.avatarUrl}
+          src={getImagePath(profileData.avatarUrl)}
           alt={profileData.name}
           width={220}
           height={220}

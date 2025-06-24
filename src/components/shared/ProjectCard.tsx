@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Github, ExternalLink } from 'lucide-react';
+import { getImagePath } from '@/lib/imageUtils';
 
 // Define the type for a single project based on your content structure
 interface ProjectItem {
@@ -21,14 +22,14 @@ export function ProjectCard(project: ProjectItem) {
       {/* Image container with aspect ratio */}
       <div className="aspect-video relative w-full overflow-hidden">
         <Image
-          src={project.imageUrl}
+          src={getImagePath(project.imageUrl)}
           alt={project.title}
           fill={true}
           className="object-cover transition-transform duration-500 group-hover:scale-105"
           data-ai-hint={project.imageHint}
         />
       </div>
-      
+
       {/* Card header for title */}
       <div className="p-4 pb-2">
         <h3 className="font-headline text-xl text-accent">{project.title}</h3>
@@ -47,7 +48,7 @@ export function ProjectCard(project: ProjectItem) {
           ))}
         </div>
       </div>
-      
+
       {/* Card footer for actions */}
       <div className="flex gap-2 pt-0 pb-4 px-4 justify-end mt-auto">
         {project.liveLink && (

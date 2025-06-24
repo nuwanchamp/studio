@@ -100,6 +100,18 @@ To explore this project:
 3. Run the development server with `npm run dev`
 4. Open [http://localhost:9002](http://localhost:9002) in your browser
 
+## Deployment Notes
+
+### GitHub Pages Configuration
+
+When deploying to GitHub Pages, the site is served from a subdirectory (e.g., `username.github.io/repo-name/`). To ensure local images display correctly, the project includes:
+
+1. **Path Configuration**: The `next.config.ts` file includes `basePath` and `assetPrefix` settings that automatically adjust for GitHub Pages deployment.
+2. **Image Path Utility**: A `getImagePath` utility function in `src/lib/imageUtils.ts` ensures all image references work correctly in both development and production environments.
+3. **Component Updates**: All components that use local images have been updated to use the utility function.
+
+This configuration ensures that all local images and assets are correctly referenced when the site is deployed to GitHub Pages.
+
 ## Conclusion
 
 This project demonstrates the transformative potential of AI in software development. By leveraging Firebase Studio,

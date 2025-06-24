@@ -2,6 +2,7 @@
 import { Button } from '@/components/ui/button';
 import { Download } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
+import { getImagePath } from '@/lib/imageUtils';
 
 export function ResumeDownloadButton() {
   const { toast } = useToast();
@@ -9,13 +10,13 @@ export function ResumeDownloadButton() {
   const handleDownload = () => {
     // In a real app, ensure 'nuwan-c-perera-06-2025.pdf' exists in the /public directory
     const link = document.createElement('a');
-    link.href = '/nuwan-c-perera-06-2025.pdf'; // User should replace this with their actual resume file
+    link.href = getImagePath('/nuwan-c-perera-06-2025.pdf'); // User should replace this with their actual resume file
     link.download = 'Nuwan_C_Perera_Resume.pdf'; // User should customize the downloaded file name
-    
+
     // Check if file exists (rudimentary check, server-side check is more reliable)
     // For this example, we assume it exists or will be added by the user.
     // You might want to add error handling if the file doesn't exist.
-    
+
     try {
       document.body.appendChild(link);
       link.click();
