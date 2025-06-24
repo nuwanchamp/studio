@@ -4,50 +4,67 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Github, ExternalLink } from 'lucide-react';
-import { ProjectCard } from '@/components/shared/ProjectCard';
+import { cn } from '@/lib/utils';
 
 export function ProjectsPortfolio() {
   const projectsData = getProjects();
-  const [featuredProject, ...otherProjects] = projectsData; // Destructure the first project
-
-  if (!featuredProject) {
-    return null; 
-  }
 
   return (
-    <div className="space-y-16 md:space-y-20">
-      {/* Featured Project Section */}
-      <div className="glass-card rounded-xl shadow-2xl overflow-hidden transition-all duration-300 hover:shadow-accent/20">
-        <div className="grid md:grid-cols-5 gap-0">
-          <div className="md:col-span-3 relative aspect-video">
+    <div className="space-y-16">
+      {projectsData.map((project, index) => (
+        <div
+          key={index}
+          className={cn(
+            "group grid grid-cols-1 md:grid-cols-5 gap-6 md:gap-8 items-center",
+            "transition-all duration-300"
+          )}
+        >
+          {/* Image container */}
+          <div
+            className={cn(
+              "md:col-span-3 aspect-video relative w-full overflow-hidden rounded-lg shadow-xl glass-card",
+              index % 2 !== 0 && "md:order-last" // Alternate image position
+            )}
+          >
             <Image
-              src={featuredProject.imageUrl}
-              alt={featuredProject.title}
+              src={project.imageUrl}
+              alt={project.title}
               layout="fill"
               objectFit="cover"
-              className="transition-transform duration-500 hover:scale-105"
-              data-ai-hint={featuredProject.imageHint}
+              className="transition-transform duration-500 group-hover:scale-105"
+              data-ai-hint={project.imageHint}
             />
+             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
           </div>
-          <div className="md:col-span-2 p-6 md:p-8 flex flex-col">
-            <h3 className="font-headline text-2xl md:text-3xl font-bold text-accent mb-2">{featuredProject.title}</h3>
-            <div className="flex flex-wrap gap-2 mb-4">
-              {featuredProject.tags.map(tag => (
+          
+          {/* Text content container */}
+          <div
+            className={cn(
+              "md:col-span-2 flex flex-col justify-center",
+              index % 2 !== 0 ? "md:text-right md:items-end" : "md:text-left md:items-start" // Alternate text alignment
+            )}
+          >
+            <h3 className="font-headline text-2xl md:text-3xl font-bold text-accent mb-3">{project.title}</h3>
+            
+            <p className="text-foreground/80 leading-relaxed mb-4">{project.description}</p>
+
+            <div className={cn("flex flex-wrap gap-2 mb-6", index % 2 !== 0 ? "md:justify-end" : "md:justify-start")}>
+              {project.tags.map(tag => (
                 <span key={tag} className="px-3 py-1 text-xs bg-secondary text-secondary-foreground rounded-full font-medium">{tag}</span>
               ))}
             </div>
-            <p className="text-foreground/80 leading-relaxed flex-grow mb-6">{featuredProject.description}</p>
-            <div className="flex gap-4 justify-start mt-auto">
-              {featuredProject.liveLink && (
+
+            <div className={cn("flex gap-4 mt-auto", index % 2 !== 0 ? "md:justify-end" : "md:justify-start")}>
+              {project.liveLink && (
                 <Button asChild variant="outline" className="border-accent text-accent hover:bg-accent hover:text-accent-foreground transition-colors duration-300">
-                  <Link href={featuredProject.liveLink} target="_blank" rel="noopener noreferrer">
+                  <Link href={project.liveLink} target="_blank" rel="noopener noreferrer">
                     <ExternalLink className="mr-2 h-4 w-4" /> Live Demo
                   </Link>
                 </Button>
               )}
-              {featuredProject.repoLink && (
+              {project.repoLink && (
                 <Button asChild variant="ghost" className="text-foreground/70 hover:text-accent hover:bg-transparent transition-colors duration-300">
-                  <Link href={featuredProject.repoLink} target="_blank" rel="noopener noreferrer">
+                  <Link href={project.repoLink} target="_blank" rel="noopener noreferrer">
                     <Github className="mr-2 h-4 w-4" /> View Code
                   </Link>
                 </Button>
@@ -55,19 +72,7 @@ export function ProjectsPortfolio() {
             </div>
           </div>
         </div>
-      </div>
-
-      {/* Grid of other projects */}
-      {otherProjects.length > 0 && (
-        <div>
-          <h3 className="font-headline text-2xl md:text-3xl font-bold mb-8 text-center text-primary/80">Other Noteworthy Projects</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {otherProjects.map((project, index) => (
-              <ProjectCard key={index} {...project} />
-            ))}
-          </div>
-        </div>
-      )}
+      ))}
     </div>
   );
 }
