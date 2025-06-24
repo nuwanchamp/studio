@@ -48,7 +48,7 @@ export function SkillsShowcase() {
             color: 'white', // White text for better contrast with blue background
             size: 14 + (skill.expertise / 100) * 6, // Scale font size based on expertise
             face: 'Arial, sans-serif',
-            bold: skill.expertise > 80 // Bold text for high expertise skills
+            bold: skill.expertise > 80 ? 'bold' : undefined // Bold text for high expertise skills
           },
           size: size,
           value: skill.expertise, // Used for scaling in some layouts
@@ -93,8 +93,6 @@ export function SkillsShowcase() {
         borderWidth: 1.5,
         borderWidthSelected: 3,
         shadow: true,
-        shadowColor: 'rgba(0, 0, 128, 0.3)', // Bluish shadow
-        shadowSize: 5,
         shape: 'dot',
         scaling: {
           min: 10,
