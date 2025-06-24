@@ -14,7 +14,7 @@ export default function HomePage() {
     <>
       <Header />
       <main className="flex-grow">
-        <SectionWrapper title="Profile Summary" id="profile">
+        <SectionWrapper title="" id="profile">
           <ProfileSummary />
         </SectionWrapper>
 

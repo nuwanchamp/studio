@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { Github } from 'lucide-react';
 
 export function Header() {
   return (
@@ -13,6 +14,15 @@ export function Header() {
           <Link href="#skills" className="text-foreground/80 hover:text-accent transition-colors duration-300">Skills</Link>
           <Link href="#projects" className="text-foreground/80 hover:text-accent transition-colors duration-300">Projects</Link>
           <Link href="#certifications" className="text-foreground/80 hover:text-accent transition-colors duration-300">Certs</Link>
+          <Link 
+            href="https://github.com/nuwanchamp/studio"
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="text-accent font-medium border border-accent rounded-md px-3 py-1 hover:bg-accent hover:text-background transition-colors duration-300 flex items-center gap-2"
+          >
+            <Github className="w-5 h-5" />
+            <span>source code</span>
+          </Link>
         </nav>
       </div>
     </header>
