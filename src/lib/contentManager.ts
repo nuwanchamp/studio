@@ -52,6 +52,9 @@ interface CertificationItem {
   name: string;
   organization: string;
   date: string;
+  imageUrl: string;
+  imageHint: string;
+  link: string;
 }
 
 interface ProjectItem {
