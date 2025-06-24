@@ -1,3 +1,4 @@
+
 {
   "profile": {
     "name": "Nuwan C. Perera",
@@ -112,26 +113,42 @@
     },
     {
       "title": "Task Management App",
-      "description": "A collaborative task management application with boards, lists, and cards, inspired by Trello.",
-      "imageUrl": "https://placehold.co/600x400.png",
+      "description": "A collaborative task management application with boards, lists, and cards, inspired by Trello. Features real-time updates and drag-and-drop functionality.",
+      "imageUrl": "https://placehold.co/600x600.png",
       "imageHint": "task board",
       "tags": ["Vue.js", "Firebase", "Realtime DB"],
       "liveLink": "#"
     },
     {
       "title": "Data Visualization Dashboard",
-      "description": "An interactive dashboard for visualizing complex datasets, built with D3.js and React.",
-      "imageUrl": "https://placehold.co/600x400.png",
+      "description": "An interactive dashboard for visualizing complex datasets, built with D3.js and React. Includes various chart types and filtering options.",
+      "imageUrl": "https://placehold.co/600x450.png",
       "imageHint": "charts graphs",
       "tags": ["React", "D3.js", "Python", "Flask"],
       "repoLink": "#"
     },
     {
       "title": "AI Powered Chatbot",
-      "description": "A customer service chatbot utilizing natural language processing to understand and respond to user queries.",
-      "imageUrl": "https://placehold.co/600x400.png",
+      "description": "A customer service chatbot utilizing natural language processing to understand and respond to user queries, integrated with a live agent handoff system.",
+      "imageUrl": "https://placehold.co/600x500.png",
       "imageHint": "chat interface",
       "tags": ["Python", "NLP", "Dialogflow", "API"],
+      "liveLink": "#"
+    },
+    {
+      "title": "Recipe Finder App",
+      "description": "A mobile-friendly application that allows users to find recipes based on ingredients they have at home. Features a clean, minimalist UI.",
+      "imageUrl": "https://placehold.co/600x700.png",
+      "imageHint": "food cooking",
+      "tags": ["Flutter", "Dart", "Firebase", "API"],
+      "repoLink": "#"
+    },
+    {
+      "title": "Personal Blog Platform",
+      "description": "A lightweight, markdown-based blogging platform built with a static site generator for optimal performance and security.",
+      "imageUrl": "https://placehold.co/600x350.png",
+      "imageHint": "writing blog",
+      "tags": ["Next.js", "Markdown", "Tailwind CSS", "Vercel"],
       "liveLink": "#"
     }
   ]

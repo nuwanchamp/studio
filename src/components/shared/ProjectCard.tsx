@@ -17,7 +17,7 @@ interface ProjectItem {
 
 export function ProjectCard(project: ProjectItem) {
   return (
-    <div className="flex flex-col h-full glass-card shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 rounded-lg group">
+    <div className="flex flex-col h-full glass-card shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 rounded-lg group break-inside-avoid mb-8">
       {/* Image container with aspect ratio */}
       <div className="aspect-video relative w-full overflow-hidden">
         <Image
@@ -36,7 +36,7 @@ export function ProjectCard(project: ProjectItem) {
 
       {/* Card content for description and tags */}
       <div className="flex-grow px-4 pt-0 pb-3">
-        <p className="text-sm text-foreground/70 mb-3 line-clamp-3">
+        <p className="text-sm text-foreground/70 mb-3">
           {project.description}
         </p>
         <div className="flex flex-wrap gap-2">
