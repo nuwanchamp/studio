@@ -19,6 +19,12 @@
       "fill": "hsl(var(--chart-1))",
       "expertise": 85
     },
+     {
+      "name": "Wordpress",
+      "category": "PHP",
+      "fill": "hsl(var(--chart-1))",
+      "expertise": 85
+    },
     {
       "name": "TypeScript",
       "category": "Node.js",
